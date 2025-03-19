@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				bloomin: {
+					blue: '#0ea5e9',
+					indigo: '#2563eb',
+					purple: '#8b5cf6',
+					cyan: '#22d3ee',
+					navy: '#0f172a',
+					'navy-light': '#1e293b',
+					white: '#f8fafc',
+					gray: '#94a3b8'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,61 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 0 0 rgba(34, 211, 238, 0.4)',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						boxShadow: '0 0 20px 10px rgba(34, 211, 238, 0.2)',
+						transform: 'scale(1.02)'
+					}
+				},
+				'typewriter': {
+					from: { width: '0' },
+					to: { width: '100%' }
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'morphing': {
+					'0%, 100%': { 
+						borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
+					},
+					'50%': { 
+						borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%',
+					}
+				},
+				'counter': {
+					from: { 
+						content: "var(--num-start)" 
+					},
+					to: { 
+						content: "var(--num-end)" 
+					}
+				},
+				'wave': {
+					'0%': { transform: 'translateX(0)' },
+					'50%': { transform: 'translateX(-25%)' },
+					'100%': { transform: 'translateX(-50%)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'typewriter': 'typewriter 4s steps(40) forwards',
+				'blink': 'blink 1s step-end infinite',
+				'morphing': 'morphing 8s ease-in-out infinite',
+				'wave': 'wave 25s linear infinite',
+				'float-slow': 'float 6s ease-in-out infinite',
 			}
 		}
 	},
