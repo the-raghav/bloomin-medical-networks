@@ -66,17 +66,9 @@ const Navbar = () => {
                 </span>
               </a>
             ))}
-            <div className="flex space-x-3">
-              <Button 
-                variant="outline" 
-                className="border-bloomin-teal text-white hover:bg-bloomin-teal/20 transition-all duration-300"
-              >
-                Log In
-              </Button>
-              <Button className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-6 hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300">
-                Sign Up
-              </Button>
-            </div>
+            <Button className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-6 hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300">
+              Sign Up
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -111,21 +103,12 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <div className="flex flex-col space-y-2">
-              <Button 
-                variant="outline" 
-                className="border-bloomin-teal text-white hover:bg-bloomin-teal/20 transition-all duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Log In
-              </Button>
-              <Button 
-                className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-6 hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Sign Up
-              </Button>
-            </div>
+            <Button 
+              className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-6 hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Sign Up
+            </Button>
           </div>
         </div>
       )}
