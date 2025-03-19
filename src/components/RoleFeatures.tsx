@@ -2,60 +2,86 @@
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Stethoscope, GraduationCap, HeartPulse, Microscope, CheckCircle } from "lucide-react";
+import { 
+  Stethoscope, 
+  GraduationCap, 
+  HeartPulse, 
+  Microscope, 
+  CheckCircle,
+  Building,
+  Users
+} from "lucide-react";
 
 const RoleFeatures = () => {
-  const [activeTab, setActiveTab] = useState("doctors");
+  const [activeTab, setActiveTab] = useState("students");
 
   const roleContent = {
-    doctors: {
-      title: "For Doctors",
-      subtitle: "AI-Assisted Medicine",
-      description: "Access powerful AI tools for diagnosis, connect with specialists worldwide, and stay at the forefront of medical innovation.",
-      features: [
-        "AI-Assisted Diagnosis with instant data-backed insights",
-        "HIPAA-compliant telemedicine portal for virtual consultations",
-        "Global case discussion boards for collaboration",
-        "Access to cutting-edge medical research and trials"
-      ],
-      icon: <Stethoscope className="h-12 w-12 text-bloomin-cyan" />,
-      cta: "Join the Doctor Network"
-    },
     students: {
       title: "For Medical Students",
-      subtitle: "AI-Powered Learning Hub",
-      description: "Accelerate your learning with AI, connect with mentors, and access real-world case studies to prepare for your medical career.",
+      subtitle: "Study, Network & Grow",
+      description: "Connect with peers, access expert insights, and leverage AI-powered study tools to accelerate your medical education journey.",
       features: [
-        "AI-powered learning with adaptive recommendations",
-        "Internship & research placement opportunities",
-        "Virtual case studies with simulated patient scenarios",
-        "Mentorship connections with leading specialists"
+        "Find study partners & groups based on specialization",
+        "Ask questions & get expert insights from doctors",
+        "Access structured learning roadmaps & exam prep",
+        "Explore career & specialization paths",
+        "Network & socialize through virtual meetups & forums"
       ],
       icon: <GraduationCap className="h-12 w-12 text-bloomin-cyan" />,
       cta: "Start Learning with AI"
     },
+    doctors: {
+      title: "For Doctors",
+      subtitle: "Network, Collaborate & Discuss",
+      description: "Connect with verified doctors globally, discuss complex cases, and establish your professional presence in the medical community.",
+      features: [
+        "Global networking with verified doctors worldwide",
+        "Medical case discussions & cross-specialty consultations",
+        "Professional visibility through articles & case studies",
+        "Research & collaboration opportunities",
+        "AI assistance with cross-checking diagnoses & analytics"
+      ],
+      icon: <Stethoscope className="h-12 w-12 text-bloomin-cyan" />,
+      cta: "Join the Doctor Network"
+    },
     patients: {
       title: "For Patients",
-      subtitle: "Personalized Health Management",
-      description: "Get AI-powered health insights, connect with specialists, and take control of your healthcare journey with confidence.",
+      subtitle: "AI Health Insights Verified by Doctors",
+      description: "Get AI-powered health insights verified by real doctors, connect with specialists, and take control of your healthcare journey.",
       features: [
-        "AI symptom checker for preliminary diagnoses",
-        "Instant specialist matching based on your condition",
-        "Personalized health tracking and alerts",
-        "Secure health record management and sharing"
+        "Doctor-verified AI symptom checker for preliminary diagnoses",
+        "Find the right doctor based on your symptoms & conditions",
+        "Personalized health tracking, diet & medication reminders",
+        "Connect with patients facing similar health conditions",
+        "Access expert-led health discussions & Q&A sessions"
       ],
       icon: <HeartPulse className="h-12 w-12 text-bloomin-cyan" />,
       cta: "Check Your Health Now"
     },
-    researchers: {
-      title: "For Researchers",
-      subtitle: "Innovation & Collaboration Hub",
-      description: "Access secure datasets, collaborate on groundbreaking studies, and leverage AI to accelerate medical discoveries.",
+    institutions: {
+      title: "For Medical Institutions",
+      subtitle: "Manage & Expand Influence",
+      description: "Create and oversee student communities, showcase achievements, and collaborate on cutting-edge medical research globally.",
       features: [
-        "Access to anonymized medical datasets",
-        "Federated learning sandbox for AI model training",
-        "Research collaboration tools for global teamwork",
-        "Publication and grant opportunity notifications"
+        "Create & manage student discussion groups",
+        "Build strong PR through institutional achievements",
+        "Lead research & medical innovation initiatives",
+        "Collaborate with global doctors & medical organizations",
+        "Access verified clinical research partners worldwide"
+      ],
+      icon: <Building className="h-12 w-12 text-bloomin-cyan" />,
+      cta: "Expand Your Institutional Reach"
+    },
+    researchers: {
+      title: "For Medical Researchers",
+      subtitle: "Find Partners & Collaborate",
+      description: "Connect with doctors and institutions, find research partners, and collaborate on breakthrough medical studies and trials.",
+      features: [
+        "Join a collaborative research community of experts",
+        "Explore emerging trends in medical research",
+        "Partner with top institutions & industry experts",
+        "Share & discuss research findings with peers",
+        "Find funding & support for medical studies & trials"
       ],
       icon: <Microscope className="h-12 w-12 text-bloomin-cyan" />,
       cta: "Access Research Hub"
@@ -75,8 +101,8 @@ const RoleFeatures = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="doctors" className="w-full" onValueChange={setActiveTab}>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-transparent mb-8">
+        <Tabs defaultValue="students" className="w-full" onValueChange={setActiveTab}>
+          <TabsList className="grid grid-cols-2 md:grid-cols-5 gap-2 bg-transparent mb-8">
             {Object.entries(roleContent).map(([key, content]) => (
               <TabsTrigger 
                 key={key} 
