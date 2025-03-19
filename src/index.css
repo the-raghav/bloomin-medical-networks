@@ -5,25 +5,25 @@
 
 @layer base {
   :root {
-    --background: 260 50% 97%;
+    --background: 210 50% 98%;
     --foreground: 222 47% 24%;
 
-    --card: 260 50% 98%;
+    --card: 210 50% 98%;
     --card-foreground: 222 47% 24%;
 
-    --popover: 260 50% 98%;
+    --popover: 210 50% 98%;
     --popover-foreground: 222 47% 24%;
 
-    --primary: 262 83% 58%;
+    --primary: 174 75% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 70% 90%;
+    --secondary: 199 69% 84%;
     --secondary-foreground: 222 47% 24%;
 
     --muted: 210 40% 93%;
     --muted-foreground: 215 25% 40%;
 
-    --accent: 270 67% 80%;
+    --accent: 152 58% 80%;
     --accent-foreground: 222 47% 24%;
 
     --destructive: 0 62.8% 30.6%;
@@ -33,7 +33,7 @@
     --input: 220 13% 90%;
     --ring: 224.3 76.3% 48%;
 
-    --radius: 1.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 220 16% 22%;
     --sidebar-foreground: 210 40% 98%;
@@ -52,8 +52,7 @@
   }
 
   body {
-    @apply bg-gradient-to-b from-purple-50 to-indigo-50 text-slate-800 antialiased;
-    background-attachment: fixed;
+    @apply bg-bloomin-sage text-bloomin-navy antialiased;
   }
 
   html {
@@ -62,50 +61,55 @@
 }
 
 @layer components {
-  .blob-card {
-    @apply relative bg-white/70 backdrop-blur-md border border-white/40 rounded-[2rem] shadow-xl overflow-hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .blob-card::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    z-index: -1;
-    background: linear-gradient(45deg, rgba(167, 139, 250, 0.3), rgba(125, 211, 252, 0.3));
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: morphing 15s ease-in-out infinite;
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl shadow-xl;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-bloomin-teal via-bloomin-mint to-bloomin-blue text-transparent bg-clip-text;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-indigo-500 to-purple-500;
+    @apply bg-gradient-to-r from-bloomin-teal to-bloomin-blue;
   }
   
   .role-card {
-    @apply blob-card p-6 hover:bg-white/90 transition-all duration-300 cursor-pointer;
-    border-radius: 1.5rem;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+    @apply glass-card p-6 hover:bg-white/80 transition-all duration-300 cursor-pointer;
   }
   
   .feature-card {
-    @apply blob-card p-6 hover:bg-white/90 transition-all duration-300;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    @apply glass-card p-6 hover:bg-white/80 transition-all duration-300 hover:translate-y-[-5px];
   }
   
   .testimonial-card {
-    @apply blob-card p-6 relative overflow-hidden;
+    @apply glass-card p-6 relative overflow-hidden;
   }
   
   .type-cursor::after {
     content: '|';
     @apply animate-blink;
+  }
+  
+  .gradient-border {
+    position: relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #5eead4, #93c5fd, #a5f3fc);
+    z-index: -1;
+    border-radius: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .gradient-border:hover::before {
+    opacity: 1;
   }
   
   .card-shine {
@@ -118,11 +122,11 @@
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.05) 50%,
       rgba(255, 255, 255, 0) 100%
     );
     transform: translateX(-100%);
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.55s ease-in-out;
   }
   
   .feature-card:hover .card-shine {
@@ -151,8 +155,13 @@
   }
   
   .dot-pattern {
-    background-image: radial-gradient(rgba(124, 58, 237, 0.07) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(30, 64, 175, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+  
+  .counter-value {
+    @apply text-4xl font-bold text-center text-bloomin-teal;
+    counter-reset: count 0;
   }
   
   .nav-icon {
@@ -169,23 +178,5 @@
   
   .scrolled .nav-text {
     @apply opacity-0 h-0 w-0 overflow-hidden;
-  }
-  
-  @keyframes morphing {
-    0% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
-    25% {
-      border-radius: 50% 50% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-      border-radius: 70% 30% 50% 50% / 40% 60% 40% 60%;
-    }
-    75% {
-      border-radius: 30% 70% 60% 40% / 70% 30% 70% 30%;
-    }
-    100% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
   }
 }
