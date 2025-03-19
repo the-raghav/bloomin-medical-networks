@@ -5,44 +5,44 @@
 
 @layer base {
   :root {
-    --background: 217 33% 17%;
-    --foreground: 210 40% 98%;
+    --background: 210 50% 98%;
+    --foreground: 222 47% 24%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 50% 98%;
+    --card-foreground: 222 47% 24%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 50% 98%;
+    --popover-foreground: 222 47% 24%;
 
-    --primary: 199 89% 48%;
+    --primary: 180 75% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 199 69% 84%;
+    --secondary-foreground: 222 47% 24%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 93%;
+    --muted-foreground: 215 25% 40%;
 
-    --accent: 261 52% 63%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 342 79% 82%;
+    --accent-foreground: 222 47% 24%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
     --ring: 224.3 76.3% 48%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 220 16% 22%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 180 75% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 210 25% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 210 25% 25%;
+    --sidebar-ring: 180 75% 60%;
   }
 }
 
@@ -52,7 +52,7 @@
   }
 
   body {
-    @apply bg-bloomin-navy text-bloomin-white antialiased;
+    @apply bg-bloomin-sage text-bloomin-navy antialiased;
   }
 
   html {
@@ -62,23 +62,23 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl;
+    @apply bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl shadow-xl;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-bloomin-blue to-bloomin-cyan text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-transparent bg-clip-text;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-bloomin-blue to-bloomin-indigo;
+    @apply bg-gradient-to-r from-bloomin-teal to-bloomin-blue;
   }
   
   .role-card {
-    @apply glass-card p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer;
+    @apply glass-card p-6 hover:bg-white/80 transition-all duration-300 cursor-pointer;
   }
   
   .feature-card {
-    @apply glass-card p-6 hover:bg-white/20 transition-all duration-300 hover:translate-y-[-5px];
+    @apply glass-card p-6 hover:bg-white/80 transition-all duration-300 hover:translate-y-[-5px];
   }
   
   .testimonial-card {
@@ -101,7 +101,7 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #0ea5e9, #8b5cf6, #22d3ee);
+    background: linear-gradient(45deg, #5eead4, #93c5fd, #a5f3fc);
     z-index: -1;
     border-radius: 0.85rem;
     opacity: 0;
@@ -151,16 +151,16 @@
   }
   
   .wave-divider path {
-    fill: #1e293b;
+    fill: #f8fafc;
   }
   
   .dot-pattern {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(30, 64, 175, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
   }
   
   .counter-value {
-    @apply text-4xl font-bold text-center text-bloomin-cyan;
+    @apply text-4xl font-bold text-center text-bloomin-teal;
     counter-reset: count 0;
   }
   

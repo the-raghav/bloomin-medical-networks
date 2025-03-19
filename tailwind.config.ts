@@ -64,13 +64,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				bloomin: {
-					blue: '#0ea5e9',
-					indigo: '#2563eb',
-					purple: '#8b5cf6',
-					cyan: '#22d3ee',
+					teal: '#5eead4',
+					blue: '#93c5fd',
+					mint: '#a5f3fc',
+					lavender: '#ddd6fe',
+					sage: '#f8fafc',
+					'sage-light': '#f1f5f9',
 					navy: '#0f172a',
-					'navy-light': '#1e293b',
-					white: '#f8fafc',
+					charcoal: '#334155',
 					gray: '#94a3b8'
 				}
 			},
