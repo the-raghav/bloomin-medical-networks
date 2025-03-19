@@ -14,7 +14,7 @@
     --popover: 210 50% 98%;
     --popover-foreground: 222 47% 24%;
 
-    --primary: 180 75% 60%;
+    --primary: 174 75% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 199 69% 84%;
@@ -23,7 +23,7 @@
     --muted: 210 40% 93%;
     --muted-foreground: 215 25% 40%;
 
-    --accent: 342 79% 82%;
+    --accent: 152 58% 80%;
     --accent-foreground: 222 47% 24%;
 
     --destructive: 0 62.8% 30.6%;
@@ -37,12 +37,12 @@
 
     --sidebar-background: 220 16% 22%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 180 75% 60%;
+    --sidebar-primary: 174 75% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 25% 25%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 210 25% 25%;
-    --sidebar-ring: 180 75% 60%;
+    --sidebar-ring: 174 75% 60%;
   }
 }
 
@@ -66,7 +66,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-bloomin-teal via-bloomin-mint to-bloomin-blue text-transparent bg-clip-text;
   }
   
   .gradient-bg {

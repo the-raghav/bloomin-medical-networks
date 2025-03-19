@@ -44,8 +44,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <a href="#" className="flex items-center">
-              <div className="text-2xl font-bold mr-2 text-white group">
-                <span className="bg-gradient-to-r from-bloomin-blue to-bloomin-cyan bg-clip-text text-transparent group-hover:from-bloomin-cyan group-hover:to-bloomin-blue transition-all duration-500">
+              <div className="font-bold mr-2">
+                <span className="text-2xl font-extrabold gradient-text">
                   Bloomin
                 </span>
               </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 </span>
               </a>
             ))}
-            <Button className="bg-gradient-to-r from-bloomin-blue to-bloomin-indigo text-white font-medium rounded-full px-6 hover:from-bloomin-indigo hover:to-bloomin-blue transition-all duration-300 animate-pulse-glow">
+            <Button className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-6 hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300">
               Sign Up
             </Button>
           </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button 
-              className="bg-gradient-to-r from-bloomin-blue to-bloomin-indigo text-white font-medium rounded-full px-6 hover:from-bloomin-indigo hover:to-bloomin-blue transition-all duration-300"
+              className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-6 hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               Sign Up

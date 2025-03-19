@@ -6,22 +6,22 @@ import { CheckCircle, UserPlus, ShieldCheck, UserCircle, Rocket } from 'lucide-r
 const GetStarted = () => {
   const steps = [
     {
-      icon: <UserPlus className="h-10 w-10 text-bloomin-cyan" />,
+      icon: <UserPlus className="h-10 w-10 text-bloomin-teal" />,
       title: "Choose Your Role",
       description: "Select your role as a doctor, student, patient, or researcher to get a personalized experience."
     },
     {
-      icon: <ShieldCheck className="h-10 w-10 text-bloomin-cyan" />,
+      icon: <ShieldCheck className="h-10 w-10 text-bloomin-teal" />,
       title: "Verify Your Identity",
       description: "Doctors and students get institutional verification for enhanced trust and access."
     },
     {
-      icon: <UserCircle className="h-10 w-10 text-bloomin-cyan" />,
+      icon: <UserCircle className="h-10 w-10 text-bloomin-teal" />,
       title: "Set Up Your Profile",
       description: "Create your profile, join groups, connect with peers, and customize your AI tools."
     },
     {
-      icon: <Rocket className="h-10 w-10 text-bloomin-cyan" />,
+      icon: <Rocket className="h-10 w-10 text-bloomin-teal" />,
       title: "Start Exploring & Innovating",
       description: "Access AI tools, connect with the community, and transform your healthcare approach."
     }
@@ -42,7 +42,7 @@ const GetStarted = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-bloomin-blue to-bloomin-indigo hidden md:block"></div>
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-bloomin-blue to-bloomin-teal hidden md:block"></div>
             
             {steps.map((step, index) => (
               <div key={index} className="relative mb-16 last:mb-0">
@@ -58,7 +58,7 @@ const GetStarted = () => {
                   </div>
                   
                   <div className="z-10 bg-bloomin-navy flex items-center justify-center">
-                    <div className="rounded-full w-14 h-14 bg-gradient-to-r from-bloomin-blue to-bloomin-indigo flex items-center justify-center animate-pulse-glow">
+                    <div className="rounded-full w-14 h-14 bg-gradient-to-r from-bloomin-blue to-bloomin-teal flex items-center justify-center">
                       {step.icon}
                     </div>
                   </div>
@@ -78,7 +78,7 @@ const GetStarted = () => {
             <p className="text-bloomin-gray mb-6">
               Be part of the future of healthcare. Connect, learn, diagnose, and innovate with Bloomin.
             </p>
-            <Button className="bg-gradient-to-r from-bloomin-blue to-bloomin-indigo text-white font-medium rounded-full px-8 py-3 text-lg hover:from-bloomin-indigo hover:to-bloomin-blue transition-all duration-300 animate-pulse-glow">
+            <Button className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-8 py-3 text-lg hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300">
               Join Now & Start Your Journey
             </Button>
           </div>

@@ -65,12 +65,13 @@ export default {
 				},
 				bloomin: {
 					teal: '#5eead4',
-					blue: '#93c5fd',
 					mint: '#a5f3fc',
+					blue: '#93c5fd',
 					lavender: '#ddd6fe',
 					sage: '#f8fafc',
 					'sage-light': '#f1f5f9',
 					navy: '#0f172a',
+					'navy-light': '#1e293b',
 					charcoal: '#334155',
 					gray: '#94a3b8'
 				}

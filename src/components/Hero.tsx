@@ -35,22 +35,22 @@ const Hero = () => {
   const roles = [
     { 
       name: "Doctors", 
-      icon: <Stethoscope className="h-8 w-8 mb-2 text-bloomin-cyan" />,
+      icon: <Stethoscope className="h-8 w-8 mb-2 text-bloomin-teal" />,
       description: "AI-assisted diagnosis & global case discussions" 
     },
     { 
       name: "Students", 
-      icon: <GraduationCap className="h-8 w-8 mb-2 text-bloomin-cyan" />,
+      icon: <GraduationCap className="h-8 w-8 mb-2 text-bloomin-teal" />,
       description: "AI learning hub with mentorship & case studies" 
     },
     { 
       name: "Patients", 
-      icon: <HeartPulse className="h-8 w-8 mb-2 text-bloomin-cyan" />,
+      icon: <HeartPulse className="h-8 w-8 mb-2 text-bloomin-teal" />,
       description: "AI symptom checker & instant doctor matching" 
     },
     { 
       name: "Researchers", 
-      icon: <Microscope className="h-8 w-8 mb-2 text-bloomin-cyan" />,
+      icon: <Microscope className="h-8 w-8 mb-2 text-bloomin-teal" />,
       description: "Access datasets & AI model sandbox" 
     }
   ];
@@ -70,7 +70,7 @@ const Hero = () => {
               Connect with medical professionals, leverage AI for diagnoses, and transform healthcare through our revolutionary platform.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
-              <Button className="bg-gradient-to-r from-bloomin-blue to-bloomin-indigo text-white font-medium rounded-full px-8 py-6 hover:from-bloomin-indigo hover:to-bloomin-blue transition-all duration-300 animate-pulse-glow text-lg">
+              <Button className="bg-gradient-to-r from-bloomin-teal to-bloomin-blue text-white font-medium rounded-full px-8 py-6 hover:from-bloomin-blue hover:to-bloomin-teal transition-all duration-300 text-lg">
                 Join the Medical Revolution
               </Button>
               <Button variant="outline" className="rounded-full px-8 py-6 border-white/30 hover:bg-white/10 text-lg">
